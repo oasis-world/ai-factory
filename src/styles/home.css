@@ -1,0 +1,160 @@
+.home-shell { max-width: 1080px; }
+
+.home-hero { text-align: center; padding: 10px 0 34px; }
+
+.home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.brand-name { font-weight: 700; letter-spacing: 0.02em; }
+
+.hero-badge {
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 5px 10px;
+  margin-left: 4px;
+}
+
+.home-hero h1 {
+  font-size: 38px;
+  margin: 20px 0 12px;
+  letter-spacing: -0.03em;
+}
+
+.hero-lead {
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #40474d;
+}
+
+.hero-en { color: var(--muted); font-size: 13px; margin-top: 10px; }
+
+.factory-map {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.flow-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  min-height: 172px;
+  padding: 24px 18px;
+  border-radius: 22px;
+  border: 1px solid transparent;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flow-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(20, 40, 36, 0.11);
+}
+
+.flow-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.flow-name { font-size: 20px; letter-spacing: -0.01em; }
+.flow-sub { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.flow-desc { font-size: 13px; line-height: 1.6; color: #566068; }
+
+.flow-enter {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 650;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.flow-card:hover .flow-enter,
+.flow-card:focus-visible .flow-enter { opacity: 1; transform: none; }
+
+.tone-mint { background: #e8f4f0; }
+.tone-blue { background: #e9edfa; }
+.tone-violet { background: #f4ecfb; }
+.tone-cream { background: #fbf4e6; }
+.tone-white { background: #fff; border-color: var(--line); }
+
+.flow-full { min-height: 200px; padding: 30px 20px; }
+.flow-full .flow-name { font-size: 26px; }
+
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.flow-arrow {
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-arrow-line { width: 2px; height: 26px; background: #cfd5d3; }
+.flow-arrow-head {
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #8c9491;
+  border-bottom: 2px solid #8c9491;
+  transform: rotate(45deg) translate(-3px, -5px);
+}
+
+.home-foot { text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px; }
+
+.soon-panel {
+  padding: 56px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.soon-panel .flow-icon { width: 84px; height: 84px; border-radius: 24px; }
+.soon-panel h1 { font-size: 32px; margin: 8px 0 0; }
+.soon-sub { color: var(--accent); font-weight: 650; margin: 0; }
+.soon-desc { color: #485056; margin: 0; }
+.soon-note { max-width: 520px; color: var(--muted); line-height: 1.8; margin: 8px 0 18px; }
+
+@media (max-width: 860px) {
+  .flow-grid { grid-template-columns: 1fr; }
+  .flow-arrow { height: 36px; }
+  .flow-arrow-line { height: 18px; }
+  .home-hero h1 { font-size: 30px; }
+  .factory-map { padding: 18px; }
+  .flow-full { min-height: 176px; }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .flow-card:hover { transform: none; box-shadow: none; }
+  .flow-enter { opacity: 1; transform: none; }
+}
